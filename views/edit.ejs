@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My CRUD in NodeJS</title>
+  <title>Registro</title>
 
   <style>
 
@@ -47,7 +47,7 @@ body{
 </head>
 <body>
  
-  <div id="titulo"><h1>Registros</h1></div>
+  <div id="titulo"><h1>Editar Registro</h1></div>
   <% data.forEach(function(details) { %>
     <form action="/edit/<%= details._id %>" method="POST">
       <table border="1">
@@ -59,6 +59,7 @@ body{
           <td>Endereço</td>
           <td>Rg</td>
           <td>Cpf</td>
+          <td>Telefone</td>
           <td>Data de nascimento</td>
           <td>Estado</td>
       
@@ -70,9 +71,11 @@ body{
           <td><input type="text" value="<%= details.name %>" name="name"></td>
           <td><input type="text" value="<%= details.surname %>" name="surname"></td>
           <td><input type="email" value="<%= details.email %>" name="email"></td>
+          <td><input type="text" value="<%= details.senha %>" name="senha"></td>
           <td><input type="text" value="<%= details.endereco %>" name="endereco"></td>
           <td><input type="text" value="<%= details.rg %>" name="rg"></td>
           <td><input type="text" value="<%= details.cpf %>" name="cpf"></td>
+          <td><input type="text" value="<%= details.telefone %>" name="telefone"></td>
           <td><input type="text" value="<%= details.data_nascimento %>" name="data_nascimento" ></td>
           <td >
               <select name="estado" class="inputclass">

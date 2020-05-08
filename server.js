@@ -54,11 +54,19 @@ app.route('/edit/:id')
     res.render('edit.ejs', { data: result })
   })
 })
+
+
 .post((req, res) => {
   var id = req.params.id
   var name = req.body.name
   var surname = req.body.surname
+  var email = req.body.email
   var endereco = req.body.endereco
+  var rg = req.body.rg
+  var cpf = req.body.cpf
+  var telefone = req.body.telefone
+  var data_nascimento = req.body.data_nascimento
+  var estado= req.body.estado 
   
  
 
@@ -66,7 +74,15 @@ app.route('/edit/:id')
     $set: {
       name: name,
       surname: surname,
-      endereco: endereco
+      email: email,
+      endereco: endereco,
+      rg: rg,
+      cpf: cpf,
+      telefone: telefone,
+      data_nascimento:data_nascimento,
+      estado: estado
+
+
       
     }
   }, (err, result) => {

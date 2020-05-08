@@ -113,7 +113,7 @@
             <div class="divesquerda">
               
                 <label for="name">Nome </label>
-                <input type="text" placeholder="Nome" name="name" class="inputclass" maxlength="20" required  >
+                <input type="text" placeholder="Nome" name="name" class="inputclass" maxlength="20"   >
                 <br> <br> <br> <br>
                 <label for="cpf">Cpf</label>
                 <input type="text" placeholder="Digite o numero do seu CPF" name="cpf" class="inputclass" maxlength="11" required >
@@ -123,6 +123,9 @@
                 <br> <br> <br> <br>
                 <label for="endereco" >Endereço</label>
                 <input type="text" placeholder="Endereço" name="endereco" class="inputclass" required >
+                <br> <br> <br> <br>
+                <label for="endereco" >Telefone</label>
+                <input type="text" placeholder="Telefone" name="telefone" class="inputclass" required >
                 <br> <br> <br> <br>   <br> <br> <br> <br>   <br> 
                 
               
@@ -182,8 +185,13 @@
             <button class="cssbutton"><a href="/show">Lista de Cadastrados</a></button>
             </div>
             <script>
-              function cadastrocomsucesso(){
-                  alert("Cadastro foi realizado com sucesso")     
+              function cadastrocomsucesso(nome){
+                if(nome != null) {
+                  alert("Cadastro foi realizado com sucesso")    
+                }else{
+                  alert(" Preencha todos os campos")   
+                }
+                   
             }
             </script>
         </form> 
